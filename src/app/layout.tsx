@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Chakra_Petch } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const chakraPetch = Chakra_Petch({ subsets: ["latin"], weight: "400" });
-
 export const metadata: Metadata = {
-  title: "My little gallery",
-  description: "Art",
+  title: "My Little Gallery — A Private Digital Exhibition",
+  description:
+    "A personal digital salon curated by Furkan İlhan, where timeless masterpieces are given room to be felt.",
 };
 
 export default function RootLayout({
@@ -22,7 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="/logo.png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/logo.png" />
       </head>
-      <body className={chakraPetch.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
